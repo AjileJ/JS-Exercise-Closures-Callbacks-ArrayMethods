@@ -141,8 +141,8 @@ function processProduct(x,y,cb) {
  * "lady gaga" and `['foo', 'bar']` and `(bool) => bool ? 'nice!' : 'sad'`,
  * should return "sad".
 */
-function processContains(/* CODE HERE */) {
-  /* CODE HERE */
+function processContains(item, list, cb) {
+  return cb(list.includes(item))
 }
 
 /**
@@ -164,8 +164,9 @@ function processContains(/* CODE HERE */) {
  * [2] Invoking `processDuplicateFree` passing `[1,1,2,2,3]` and `(arr) => arr.length`,
  * should return 3.
 */
-function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */) {
-  /* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */
+function processDuplicateFree(list,cb) {
+  let newL = new Set(list) 
+  return cb([...newL])
 }
 
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
@@ -186,8 +187,11 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
  * @returns an array with all the runners' full names in the following format: "Smith, John".
  * The full names appear in the array in the same order the runners appear in the `runners` array.
 */
-function getFullNames(/* CODE HERE */) {
-  /* CODE HERE */
+function getFullNames(arr) {
+  console.log(arr)
+  arr.map(runner => {
+    return (runner.last_name + ', ' + runner.first_name )
+  })
 }
 
 /**

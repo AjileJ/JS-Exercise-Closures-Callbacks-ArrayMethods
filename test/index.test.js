@@ -29,7 +29,7 @@ if (typeof exports !== "undefined") {
   } = require("../index.js");
 }
 var expect = chai.expect;
-
+console.log('runners',  runners)
 function isFunction(functionToCheck) {
   return functionToCheck && {}.toString.call(functionToCheck) === '[object Function]';
 }
